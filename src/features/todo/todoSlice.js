@@ -14,7 +14,7 @@ const todoSlice = createSlice(
                 const todo = {
                     id: nanoid(),
                     text: action.payload,
-                    isEditable: false,
+               
                 }
 
                 state.todos.push(todo)
@@ -25,15 +25,15 @@ const todoSlice = createSlice(
                 )
             },
 
-            updateTodo: (state,action)=>{
-                state.todos.map((eachTodo)=>{
-                    if(eachTodo.id == action.payload.id)
-                    {
-                        eachTodo.text = action.payload.text
-                    }
-                    return eachTodo;
-                })
-            }
+            // updateTodo: (state,action)=>{
+            //     state.todos.map((eachTodo)=>{
+            //         if(eachTodo.id == action.payload.id)
+            //         {
+            //             eachTodo.text = action.payload.text
+            //         }
+            //         return eachTodo;
+            //     })
+            // }
         }
     }
 )
